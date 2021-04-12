@@ -1,4 +1,6 @@
 package service;
+import java.util.List;
+
 import dao.LadderDao;
 import model.Ladder;
 
@@ -7,5 +9,9 @@ public class LadderService {
 
 	public void saveLadder(Ladder ladders) {
 		ladderDao.saveLadder(ladders);
+	}
+	public List<Ladder> getLadders()
+	{
+		return ladderDao.getLadder();
 	}
 }

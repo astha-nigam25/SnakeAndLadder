@@ -6,9 +6,10 @@ import java.util.List;
 import model.*;
 public class LadderAndSnakeService {
 	private SnakeAndLadder snakeAndLadder;
+//	private SnakeService snakes =new SnakeService();
+//	private LadderService ladders;
 	private int initiialNumberOfPlayers;
 	private List<Player> players;
-	private static final int DEFAULT_BOARD_SIZE = 100;
 	private PlayerService playerService  = new PlayerService();
 	
 	
@@ -18,9 +19,6 @@ public class LadderAndSnakeService {
 		this.players = playerService.getAllPlayers();
 		this.initiialNumberOfPlayers = players.size();
 	}
-	public LadderAndSnakeService() {
-        this(LadderAndSnakeService.DEFAULT_BOARD_SIZE);
-    }
 	
 	private boolean isGameCompleted()
 	{
@@ -66,11 +64,11 @@ public class LadderAndSnakeService {
 		}
 		player.setInitialPosition(newPosition);
 		players.add(player);
-		System.out.println(player.getName() + "rolled dice " + diceValue + "and moved from" + oldPosition +" to " + newPosition);
+		System.out.println(player.getName() + " rolled dice " + diceValue + " and moved from " + oldPosition +" to " + newPosition);
 	}
 	private int getNewPositionAfterSnakesandLadders(int position)
 	{
-		int previousPosition = position;
+		int previousPosition;
 		do
 		{
 			previousPosition = position;

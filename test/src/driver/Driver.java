@@ -19,7 +19,6 @@ public static void main(String[] args)
 	Scanner ob = new Scanner(System.in);
 	System.out.println("Enter no.of snakes");
 	int noOfSnakes = ob.nextInt();
-	List<Snake> snakes = new ArrayList<Snake>();
 	for(int i = 0;i< noOfSnakes;i++)
 	{	
 		Snake obj = new Snake(ob.nextInt(), ob.nextInt());
@@ -27,7 +26,6 @@ public static void main(String[] args)
 	}
 	System.out.println("Enter no.of ladders");
 	int noOfLadders = ob.nextInt();
-	List<Ladder> ladders = new ArrayList<Ladder>();
 	for(int i = 0;i< noOfLadders;i++)
 	{	
 		Ladder ladderOb = new Ladder(ob.nextInt(), ob.nextInt());

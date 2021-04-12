@@ -1,18 +1,24 @@
 package model;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
+
+import service.LadderService;
+import service.SnakeService;
 
 public class SnakeAndLadder {
 	private List<Snake> snakes;
 	private List<Ladder> ladders;
+	private LadderService ladderService = new LadderService();
+	private SnakeService snakeService = new SnakeService();
+	
+	
 	private int size;
 	public SnakeAndLadder(int size)
 	{
 		this.size = size;
-		this.ladders = new ArrayList<Ladder>();
-		this.snakes = new ArrayList<Snake>();
+		this.ladders = ladderService.getLadders();
+		this.snakes = snakeService.getSnakes();
 	}
 	public int getSize()
 	{
